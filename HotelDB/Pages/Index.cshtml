@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>.</h1>
+
+<img src="~/Images/img.jpg" style="width:40%;float:left" />
+
+<form method="get" action="/Create" border="0" cellpadding="0" cellspacing="0" style="width:60%;float:left">
+    <div class="input-group">
+        <input type="text" name="customerID" class="form-control" placeholder="Customer ID" />
+        <input type="text" name="customerName" class="form-control" placeholder="Name" />
+        <input type="text" name="city" class="form-control" placeholder="City" />
+        <input type="text" name="roomNumber" class="form-control" placeholder="Room Number" />
+        <input type="text" name="days" class="form-control" placeholder="Days Booked" />
+        <input type="text" name="amount" class="form-control" placeholder="Total Amount" />
+        <input type="text" name="paymentMethod" class="form-control" placeholder="Payment Method" />
+        <input type="text" name="status" class="form-control" placeholder="Payment Status: 1/0 (1 for YES, 0 for NO)" />
+        <input type="text" name="status" class="form-control" placeholder="Identity Status: 1/0 (1 for YES, 0 for NO)" />
+        <br />
+        <input type="submit" value="CREATE ENTRY" class="btn btn-primary" style="float:right;background:green;" />
+    </div>
+</form>
+
+<a asp-page="/Contact" class="btn btn-info navbar-btn">View</a>
+<form method="get" action="/Delete" border="0" cellpadding="0" cellspacing="0" style="width:60%;float:left">
+    <div class="input-group">
+        <input type="text" name="customerID" class="form-control" placeholder="Customer ID" />
+        <input type="submit" value="DELETE ENTRY" class="btn btn-primary" style="float:right;background:red;" />
+    </div>
+</form>
+
+<asp:GridView id="Data" runat="server"></asp:GridView>
+<style>
+body { background-image: url('Images/bg.jpeg'); font-size: 12pt; margin: 0; padding: 0; }
+</style>
